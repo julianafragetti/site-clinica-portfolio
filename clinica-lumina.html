@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clínica Lumina · Estética médica e avançada</title>
+<meta name="description" content="Cuidado que valoriza sua beleza natural. Projeto-conceito de webdesign para clínica de estética.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF5F1;--bg2:#F4E6E1;--ink:#2E1B1E;--muted:#6C5A5C;--gold:#8A6420;--card:#FFFFFF;--line:#E7D4CE;--rose:#2A1519;--g:#D4B07A;--blush:#F0C9C4;
+box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1A1112;--bg2:#241719;--ink:#F6ECE8;--muted:#BBA8A9;--gold:#D8B57A;--card:#2B1D1F;--line:#40292C}}
+:root[data-theme="dark"]{--bg:#1A1112;--bg2:#241719;--ink:#F6ECE8;--muted:#BBA8A9;--gold:#D8B57A;--card:#2B1D1F;--line:#40292C}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.65 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-weight:500;line-height:1;margin:0}
+em{font-style:italic}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--g);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(1.1rem,4vw,2.5rem)}
+header.top{position:fixed;inset:0 0 auto 0;z-index:20;padding-top:env(safe-area-inset-top,0px);color:#F6ECE8;transition:background .3s}
+header.top.solid{background:rgba(42,21,25,.9);backdrop-filter:blur(10px)}
+header .in{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 0;flex-wrap:wrap}
+.brand{text-decoration:none;font:600 1.75rem "Cormorant Garamond",Georgia,serif;letter-spacing:.03em}
+.brand small{display:block;font:500 .62rem Manrope,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--g);margin-top:-.15rem}
+nav{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;font-size:.94rem}
+nav a:not(.btn):hover{color:var(--g)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:999px;font:600 .95rem Manrope,system-ui,sans-serif;text-decoration:none;background:var(--g);color:#2A1519;border:1.5px solid var(--g);cursor:pointer;transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.hero{position:relative;min-height:100svh;background:var(--rose);color:#F6ECE8;overflow:hidden;display:flex;align-items:center}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:fl 16s ease-in-out infinite alternate}
+.b1{width:46vmax;height:46vmax;background:#B8606B;left:-12vmax;top:-10vmax}
+.b2{width:36vmax;height:36vmax;background:#D4B07A;right:-8vmax;bottom:-12vmax;animation-delay:-6s;opacity:.4}
+.b3{width:26vmax;height:26vmax;background:#E8A9A6;right:20%;top:6%;animation-delay:-10s;opacity:.3}
+@keyframes fl{to{transform:translate(6vmax,4vmax) scale(1.12)}}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(1.5rem,5vw,4rem);align-items:center;padding-top:7rem;padding-bottom:4rem}
+.kicker{font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.74rem;color:var(--g);margin:0 0 1.4rem}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7rem)}
+.hero h1 em{color:var(--g)}
+.hero p.lead{max-width:31rem;font-size:1.12rem;color:#E4D2CE;margin:1.5rem 0 2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.chips{display:flex;gap:.6rem 1.4rem;flex-wrap:wrap;margin-top:2.2rem;font-size:.9rem;color:#E4D2CE}
+.chips span::before{content:"✦";color:var(--g);margin-right:.5rem}
+.glass{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);border-radius:22px;padding:1.5rem}
+.glass h3{font-size:1.7rem;margin-bottom:.3rem}
+.glass p{margin:0 0 1rem;font-size:.92rem;color:#E4D2CE}
+.slot{display:flex;justify-content:space-between;align-items:center;width:100%;padding:.8rem 1rem;margin-top:.5rem;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:inherit;font:600 .95rem Manrope,sans-serif;cursor:pointer;text-align:left;transition:background .2s}
+.slot:hover{background:rgba(212,176,122,.28)}
+.slot small{font-weight:500;color:var(--g)}
+section{padding:clamp(4rem,9vw,7.5rem) 0}
+.num{font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.74rem;color:var(--gold);margin:0 0 1rem}
+h2{font-size:clamp(2.4rem,5.6vw,4.4rem)}
+.sub{color:var(--muted);max-width:36rem;margin:1rem 0 2rem}
+.bar{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:1.6rem}
+.tabs{display:flex;gap:.5rem}
+.tabs button{font:600 .92rem Manrope,sans-serif;padding:.6rem 1.3rem;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.bar input{font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:.65rem 1.2rem;min-width:min(100%,260px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem;display:flex;flex-direction:column;gap:.5rem;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px -22px rgba(42,21,25,.5);border-color:var(--g)}
+.card h3{font-size:1.65rem}
+.card p{margin:0;color:var(--muted);font-size:.93rem;flex:1}
+.card .meta{display:flex;justify-content:space-between;gap:.5rem;font-size:.85rem;font-weight:600;color:var(--gold);border-top:1px solid var(--line);padding-top:.7rem;margin-top:.4rem}
+.card .go{font-weight:700;font-size:.9rem;color:var(--ink);border:0;border-bottom:2px solid var(--g);align-self:flex-start;cursor:pointer;background:none;padding:0;font-family:inherit}
+.tag{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--bg2);color:var(--gold);padding:.2rem .6rem;border-radius:999px}
+.empty{color:var(--muted);padding:2rem 0}
+.note{font-size:.9rem;color:var(--muted);margin-top:1.4rem;max-width:46rem}
+.pay{margin-top:2.2rem;background:var(--rose);color:#F6ECE8;border-radius:20px;padding:1.6rem clamp(1.2rem,4vw,2.4rem);display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
+.pay h3{font-size:2rem}.pay h3 em{color:var(--g)}
+.pay p{margin:.3rem 0 0;color:#E4D2CE}
+#equipe{background:var(--bg2)}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.4rem}
+.pro{text-align:center}
+.av{aspect-ratio:3/4;border-radius:999px 999px 18px 18px;background:linear-gradient(165deg,var(--blush),var(--bg) 85%);display:grid;place-items:center;font:500 4.4rem "Cormorant Garamond",serif;color:#8A6420;margin-bottom:1rem;transition:transform .3s}
+.pro:hover .av{transform:scale(1.03)}
+.pro h3{font-size:1.7rem}
+.pro p{margin:.2rem 0;color:var(--muted);font-size:.93rem}
+.pro .cr{color:var(--gold);font-weight:600;font-size:.85rem}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.q{border-left:3px solid var(--g);padding:.4rem 0 .4rem 1.3rem}
+.q p{font:500 1.5rem/1.25 "Cormorant Garamond",serif;margin:0 0 .8rem}
+.q small{color:var(--muted)}
+#agendar{background:var(--rose);color:#F6ECE8}
+#agendar .num{color:var(--g)}
+.sch{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.sch .sub{color:#E4D2CE}
+.panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:clamp(1.2rem,3vw,2rem);display:grid;gap:1.1rem}
+.panel h3{font:700 1rem Manrope,sans-serif;margin-bottom:.5rem}
+.row{display:flex;gap:.5rem;flex-wrap:wrap}
+.pill{font:600 .9rem Manrope,sans-serif;padding:.6rem 1rem;border-radius:12px;border:1.5px solid rgba(255,255,255,.3);background:transparent;color:#F6ECE8;cursor:pointer;min-width:4.4rem}
+.pill[aria-pressed="true"]{background:var(--g);color:#2A1519;border-color:var(--g)}
+.pill:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.panel label{display:grid;gap:.35rem;font-weight:600;font-size:.9rem}
+.panel input,.panel select{font:inherit;color:#2E1B1E;background:#FBF5F1;border:1.5px solid transparent;border-radius:12px;padding:.75rem .9rem;width:100%}
+.panel .two{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+#res{margin:0;font-weight:600;color:var(--g);min-height:1.6em}
+details{border-bottom:1px solid var(--line);max-width:48rem}
+summary{cursor:pointer;list-style:none;padding:1.2rem 0;font:500 1.6rem/1.15 "Cormorant Garamond",serif;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 1.2rem;color:var(--muted);max-width:38rem}
+footer{background:#1c0f12;color:#BBA8A9;padding:3rem 0 5rem;font-size:.92rem}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;margin-bottom:2rem}
+footer h3{font:600 .72rem Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B07A;margin-bottom:.5rem}
+footer p{margin:.2rem 0}
+.fab{position:fixed;right:max(1rem,env(safe-area-inset-right,0px));bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:15;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.blob{animation:none}html{scroll-behavior:auto}}
+@media (max-width:900px){.hero .wrap,.sch{grid-template-columns:1fr}.team,.quotes{grid-template-columns:1fr}.team .av{max-width:240px;margin-inline:auto}footer .cols{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){footer .cols{grid-template-columns:1fr}.panel .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top" id="hd"><div class="wrap in">
+  <a class="brand" href="#inicio">Lumina<small>Clínica de estética</small></a>
+  <nav aria-label="Principal"><a href="#inicio">Início</a><a href="#tratamentos">Tratamentos</a><a href="#equipe">Sobre</a><a href="#contato">Contato</a><a class="btn" href="#agendar">Agendar avaliação</a></nav>
+</div></header>
+
+<main>
+<div class="hero" id="inicio">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <div>
+      <p class="kicker">Estética médica e avançada</p>
+      <h1>Cuidado que valoriza sua <em>beleza natural</em></h1>
+      <p class="lead">Avaliação individual, plano feito para o seu rosto e procedimentos realizados com calma, por uma equipe com registro profissional.</p>
+      <div class="btns"><a class="btn" href="#agendar">Agendar avaliação</a><a class="btn ghost" href="#tratamentos">Ver tratamentos</a></div>
+      <div class="chips"><span>Avaliação inicial sem custo</span><span>Hora marcada</span><span>Em até 12x no cartão</span></div>
+    </div>
+    <div class="glass">
+      <h3>Próximos horários</h3>
+      <p>Toque em um para começar seu agendamento.</p>
+      <div id="next"></div>
+    </div>
+  </div>
+</div>
+
+<section id="tratamentos"><div class="wrap">
+  <div class="rv"><p class="num">01 — Tratamentos</p><h2>Cada pele tem <em>seu plano</em></h2>
+  <p class="sub">Escolha uma categoria ou busque pelo nome. Os valores de procedimentos médicos são definidos na avaliação.</p></div>
+  <div class="bar rv">
+    <div class="tabs" role="group" aria-label="Categoria"><button aria-pressed="true" data-c="Facial">Facial</button><button aria-pressed="false" data-c="Corporal">Corporal</button></div>
+    <input id="q" type="search" placeholder="Buscar procedimento" aria-label="Buscar procedimento">
+  </div>
+  <div class="grid" id="cat" aria-live="polite"></div>
+  <p class="note">Procedimentos médicos são realizados por médica e somente após avaliação individual. Os resultados variam de pessoa para pessoa.</p>
+  <div class="pay rv"><div><h3>Parcele em até <em>12x</em> no cartão</h3><p>Planeje o cuidado com a pele sem pesar no mês.</p></div><a class="btn" href="#agendar">Quero minha avaliação</a></div>
+</div></section>
+
+<section id="equipe"><div class="wrap">
+  <div class="rv"><p class="num">02 — Sobre</p><h2>Quem cuida <em>de você</em></h2>
+  <p class="sub">Uma equipe pequena, que conhece cada paciente pelo nome e acompanha o plano do começo ao fim.</p></div>
+  <div class="team rv">
+    <div class="pro"><div class="av">M</div><h3>Dra. Marina Albuquerque</h3><p>Médica dermatologista, fundadora</p><p class="cr">CRM-SP 000000 (exemplo)</p></div>
+    <div class="pro"><div class="av">C</div><h3>Dra. Camila Reis</h3><p>Biomédica esteta</p><p class="cr">CRBM 00000 (exemplo)</p></div>
+    <div class="pro"><div class="av">B</div><h3>Beatriz Moura</h3><p>Esteticista, protocolos faciais e corporais</p><p class="cr">Registro profissional (exemplo)</p></div>
+  </div>
+  <div class="quotes rv">
+    <div class="q"><p>Fui ouvida do começo ao fim e ninguém me empurrou nada.</p><small>Paciente (depoimento de exemplo)</small></div>
+    <div class="q"><p>Ambiente tranquilo e explicações claras sobre cada etapa.</p><small>Paciente (depoimento de exemplo)</small></div>
+    <div class="q"><p>Gostei do plano combinado, sem exageros e com acompanhamento.</p><small>Paciente (depoimento de exemplo)</small></div>
+  </div>
+</div></section>
+
+<section id="agendar"><div class="wrap sch">
+  <div class="rv"><p class="num">03 — Agendamento</p><h2>Escolha seu <em>horário</em></h2>
+  <p class="sub">Selecione o tratamento, o dia e o horário. Nossa equipe confirma pelo WhatsApp.</p></div>
+  <div class="panel rv" id="panel">
+    <label>Tratamento de interesse<select id="sel"></select></label>
+    <div><h3>Dia</h3><div class="row" id="days" role="group" aria-label="Dia"></div></div>
+    <div><h3>Horário</h3><div class="row" id="hrs" role="group" aria-label="Horário"></div></div>
+    <div class="two"><label>Seu nome<input id="nm" type="text" autocomplete="name"></label><label>WhatsApp<input id="tl" type="tel" autocomplete="tel" inputmode="tel"></label></div>
+    <button class="btn" id="go" type="button">Solicitar agendamento</button>
+    <p id="res" role="status"></p>
+  </div>
+</div></section>
+
+<section id="duvidas"><div class="wrap">
+  <div class="rv"><p class="num">04 — Dúvidas frequentes</p><h2>Antes de <em>vir</em></h2></div>
+  <div style="margin-top:2rem" class="rv">
+    <details><summary>A avaliação inicial tem custo?</summary><p>Neste exemplo, a primeira avaliação é sem custo. Nela, a profissional conversa com você, examina a pele e propõe um plano.</p></details>
+    <details><summary>Quanto tempo leva para ver resultado?</summary><p>Depende do procedimento e da pessoa. Alguns têm efeito imediato e outros são graduais. Na avaliação, você recebe uma estimativa realista.</p></details>
+    <details><summary>Todos os procedimentos têm risco?</summary><p>Todo procedimento tem possíveis efeitos e contraindicações. Por isso a avaliação vem antes, e os procedimentos médicos são feitos somente pela médica.</p></details>
+    <details><summary>Posso parcelar?</summary><p>Sim, em até 12x no cartão de crédito. As condições são combinadas no atendimento.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer id="contato"><div class="wrap">
+  <div class="cols">
+    <div><h3>Endereço</h3><p>Av. das Acácias, 450, sala 12<br>Jardim Primavera</p></div>
+    <div><h3>Horário</h3><p>Seg a sex, 9h às 19h<br>Sábado, 9h às 14h</p></div>
+    <div><h3>Contato</h3><p>WhatsApp (00) 90000-0000<br>@clinicalumina</p></div>
+    <div><h3>Responsável técnica</h3><p>Dra. Marina Albuquerque<br>CRM-SP 000000 (exemplo)</p></div>
+  </div>
+  <p><b>Clínica Lumina</b> é um projeto-conceito fictício de webdesign. Nome, equipe, registros, endereço, preços, depoimentos e contatos são exemplos, e o agendamento é só demonstração.</p>
+</div></footer>
+<a class="btn fab" href="#agendar">Agendar avaliação</a>
+
+<script>
+const $=s=>document.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+addEventListener("scroll",()=>$("#hd").classList.toggle("solid",scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+$$(".rv").forEach(n=>io.observe(n));
+const T=[
+["Facial","Limpeza de pele profunda","Higienização, esfoliação e extração, com produtos escolhidos para o seu tipo de pele.","60 min","a partir de R$ 220",0],
+["Facial","Peeling químico","Ácidos em concentração adequada para renovar a superfície da pele.","45 min","a partir de R$ 280",0],
+["Facial","Peeling de diamante","Esfoliação mecânica suave, indicada para manutenção.","40 min","a partir de R$ 190",0],
+["Facial","Microagulhamento","Estímulo controlado da pele, combinado com ativos escolhidos pela profissional.","50 min","a partir de R$ 350",0],
+["Facial","Ledterapia","Luz de LED como complemento em protocolos de cuidado.","30 min","a partir de R$ 120",0],
+["Facial","Toxina botulínica","Procedimento médico para suavizar linhas de expressão, com foco em naturalidade.","30 min","valor após avaliação",1],
+["Facial","Preenchimento com ácido hialurônico","Procedimento médico para restaurar volume e contorno de regiões específicas.","45 min","valor após avaliação",1],
+["Facial","Bioestimulador de colágeno","Procedimento médico que estimula a pele a produzir colágeno de forma gradual.","60 min","valor após avaliação",1],
+["Facial","Skinbooster","Procedimento médico de hidratação profunda por microinjeções.","40 min","valor após avaliação",1],
+["Facial","Fios de sustentação","Procedimento médico de sustentação, indicado após avaliação criteriosa.","60 min","valor após avaliação",1],
+["Corporal","Drenagem linfática","Massagem suave e ritmada, indicada para sensação de leveza.","60 min","a partir de R$ 160",0],
+["Corporal","Massagem modeladora","Manobras firmes que trabalham contorno e circulação.","50 min","a partir de R$ 170",0],
+["Corporal","Radiofrequência corporal","Aparelho que aquece a pele, usado em protocolos de firmeza.","45 min","a partir de R$ 200",0],
+["Corporal","Carboxiterapia","Aplicação de gás carbônico, indicada em avaliação.","40 min","valor após avaliação",1],
+["Corporal","Secagem de vasinhos","Procedimento médico para vasos superficiais, indicado após avaliação.","40 min","valor após avaliação",1],
+["Corporal","Bioestimulador corporal","Procedimento médico para áreas do corpo com perda de firmeza.","60 min","valor após avaliação",1]];
+let cat="Facial";
+function render(){const q=$("#q").value.trim().toLowerCase();
+ const list=T.filter(t=>(q?true:t[0]===cat)&&(!q||(t[1]+" "+t[2]).toLowerCase().includes(q)));
+ $("#cat").innerHTML=list.length?list.map(t=>'<article class="card">'+(t[5]?'<span class="tag">Procedimento médico</span>':'')+'<h3>'+t[1]+'</h3><p>'+t[2]+'</p><div class="meta"><span>'+t[3]+'</span><span>'+t[4]+'</span></div><button class="go" data-t="'+t[1]+'">'+(t[5]?'Agendar avaliação':'Agendar')+'</button></article>').join(""):'<p class="empty">Nenhum procedimento encontrado. Tente outra palavra.</p>'}
+$$(".tabs button").forEach(b=>b.addEventListener("click",()=>{cat=b.dataset.c;$("#q").value="";$$(".tabs button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()}));
+$("#q").addEventListener("input",render);
+$("#cat").addEventListener("click",e=>{const b=e.target.closest(".go");if(b){$("#sel").value=b.dataset.t;$("#agendar").scrollIntoView()}});
+render();
+$("#sel").innerHTML='<option value="">Ainda não sei, quero uma avaliação</option>'+T.map(t=>"<option>"+t[1]+"</option>").join("");
+const WD=["dom","seg","ter","qua","qui","sex","sáb"];
+function days(){const o=[],d=new Date();d.setHours(0,0,0,0);let i=0;while(o.length<7){const x=new Date(d);x.setDate(d.getDate()+i++);if(x.getDay()!==0&&(i>1||new Date().getHours()<17))o.push(x)}return o}
+function hours(d){const e=d.getDay()===6?13:18,a=[];for(let h=9;h<=e;h++)a.push(h);return a}
+function busy(d,h){return (d.getDate()*7+h*3+d.getMonth())%4===0}
+function free(d,h){const n=new Date();return !busy(d,h)&&!(d.toDateString()===n.toDateString()&&h<=n.getHours())}
+const DS=days();let sd=null,sh=null;
+$("#days").innerHTML=DS.map((d,i)=>'<button class="pill" aria-pressed="false" data-i="'+i+'">'+WD[d.getDay()]+" "+d.getDate()+"</button>").join("");
+function drawH(){$("#hrs").innerHTML=sd==null?'<span style="color:#E4D2CE">Escolha um dia primeiro.</span>':hours(DS[sd]).map(h=>'<button class="pill" aria-pressed="'+(sh===h)+'" data-h="'+h+'"'+(free(DS[sd],h)?"":" disabled")+'>'+h+":00</button>").join("")}
+$("#days").addEventListener("click",e=>{const b=e.target.closest(".pill");if(!b)return;sd=+b.dataset.i;sh=null;$$("#days .pill").forEach(x=>x.setAttribute("aria-pressed",x===b));drawH()});
+$("#hrs").addEventListener("click",e=>{const b=e.target.closest(".pill");if(!b||b.disabled)return;sh=+b.dataset.h;drawH()});
+drawH();
+const nx=[];for(let i=0;i<DS.length;i++){for(const h of hours(DS[i])){if(free(DS[i],h)&&nx.length<3)nx.push([i,h])}}
+$("#next").innerHTML=nx.map(n=>'<button class="slot" data-i="'+n[0]+'" data-h="'+n[1]+'"><span>'+WD[DS[n[0]].getDay()]+", "+DS[n[0]].getDate()+" · "+n[1]+':00</span><small>Livre</small></button>').join("");
+$("#next").addEventListener("click",e=>{const b=e.target.closest(".slot");if(!b)return;sd=+b.dataset.i;sh=+b.dataset.h;$$("#days .pill").forEach((x,i)=>x.setAttribute("aria-pressed",i===sd));drawH();$("#agendar").scrollIntoView()});
+$("#go").addEventListener("click",()=>{const r=$("#res");
+ if(sd==null||sh==null){r.textContent="Escolha um dia e um horário.";return}
+ if(!$("#nm").value.trim()||!$("#tl").value.trim()){r.textContent="Preencha seu nome e WhatsApp.";return}
+ r.textContent="Solicitação recebida (demonstração): "+WD[DS[sd].getDay()]+", "+DS[sd].getDate()+" às "+sh+":00. Neste projeto-conceito nada é enviado."});
+</script>
+</body>
+</html>
